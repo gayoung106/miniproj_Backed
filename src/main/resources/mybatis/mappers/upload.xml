@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mulcam.mini.dao.UploadDAO">
+<insert id="insertUpload" parameterType="upload">
+		<![CDATA[
+			insert into upload (id,file_name) 
+				values(#{id},#{file_name})
+		]]>
+	</insert>
+	
+	<select id="uploadList" resultType="upload" parameterType="Upload">
+      <![CDATA[
+         select * from upload where id=#{id}
+      ]]>
+   </select>
+</mapper>		    
